@@ -1,0 +1,33 @@
+package week2;
+
+import java.util.Scanner;
+/**
+ * Created by Kat on 16.09.2016.
+ */
+public class GameRandomNum {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int pcNum =(int)(25+Math.random()*125);
+        int attempt = 0;
+        int userNum;
+        do {
+            System.out.println("Enter your number : ");
+            userNum = sc.nextInt();
+            if (userNum < pcNum) {
+                System.out.println("Larger");
+            } else if(userNum > pcNum) {
+                System.out.println("Less");
+            }
+            attempt++;
+        } while (userNum != pcNum && attempt < 5);
+
+        if (userNum == pcNum && attempt == 1) {
+            System.out.println("You win on first try!!!");
+        } else if (userNum == pcNum) {
+            System.out.println("You win!!!");
+        } else {
+            System.out.println("You not win!((");
+        }
+    }
+}
+
