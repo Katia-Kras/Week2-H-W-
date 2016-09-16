@@ -1,0 +1,43 @@
+package week2;
+
+import Utils.ArrayUtils;
+
+/**
+ * Created by Kat on 16.09.2016.
+ */
+public class Elements {
+    public static boolean sameElemInArr(int size1, int size2) {
+
+        int[] mas1 = new int[size1];
+        int[] mas2 = new int[size2];
+        int even1 = 0;
+        int even2 = 0;
+
+        for (int i = 0; i < mas1.length; i++) {
+            mas1[i] = (int) (Math.random() * 50) + 25;
+            if (mas1[i] % 2 == 0) {
+                even1++;
+            }
+        }
+        for (int i = 0; i < mas2.length; i++) {
+            mas2[i] = (int) (Math.random() * 50) + 25;
+            if (mas2[i] % 2 == 0) {
+                even2++;
+            }
+        }
+
+        System.out.print("\nArray1 is: ");
+        for (int i = 0; i < mas1.length; i++) {
+            System.out.print(mas1[i] + ", ");
+        };
+        System.out.print("\nArray2 is: ");
+        for (int i = 0; i < mas2.length; i++) {
+            System.out.print(mas2[i] + ", ");
+        }
+
+        boolean res = even1 > even2;
+        System.out.println("\n\nArray1 has more even numbers than array2?\n" + res);
+
+        return res;
+    }
+}
