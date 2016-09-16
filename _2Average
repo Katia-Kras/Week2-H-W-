@@ -1,0 +1,34 @@
+package week2;
+
+import java.util.Scanner;
+
+/**
+ * Created by Kat on 16.09.2016.
+ */
+public class _2Average {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter array length: ");
+        int size = sc.nextInt();
+        int array[] = new int[size];
+        System.out.println("Insert array elements:");
+
+        for (int i = 0; i < size; i++) {
+            array[i] = sc.nextInt();
+        }
+        System.out.print ("Inserted array elements:");
+        for (int i = 0; i < size; i++) {
+            System.out.print (" " + array[i]);
+        }
+        double average = 0;
+        if (array.length > 0)
+        System.out.println();
+        {
+            double sum = 0;
+            for (int j = 0; j < array.length; j++) {
+                sum += array[j];
+            }
+         System.out.println(average = sum / array.length);
+        }
+    }
+}
