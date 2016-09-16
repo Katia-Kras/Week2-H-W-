@@ -1,0 +1,22 @@
+package week2;
+
+import java.util.Scanner;
+
+/**
+ * Created by Kat on 16.09.2016.
+ */
+public class _09Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n ;
+        System.out.println("Введите факториал: ");
+        n = sc.nextInt();
+        int y = 1;
+        for (int i = 1; i <= n; i++) {
+            y = y * i;
+        }
+        System.out.println(n + "!=" + y);
+
+    }
+}
